@@ -1,3 +1,8 @@
+![GitHub license](https://img.shields.io/github/license/PDOK/request-debug-endpoint)
+![GitHub release](https://img.shields.io/github/release/PDOK/request-debug-endpoint.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/pdok/request-debug-endpoint.svg)
+![Go report](https://goreportcard.com/badge/github.com/pdok/request-debug-endpoint)
+
 # request-debug-endpoint
 
 Simple golang application that will log incoming request request
