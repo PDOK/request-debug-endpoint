@@ -6,6 +6,15 @@ Simple golang application that will log incoming request request
 
 Have you ever found yourself in the situation that a 'customer' told you that the requests that they send to your API are not working, but you didn't change anything in your stack or infrastructure. But they are not in the position to check what kind of requests are sent your way, or even if there are any requests reaching your applications (9 out of 10 because of corporate infrastructures and weird proxies). Then this might help you and your customer in identifying what is wrong. It might be a missing header or a malformed XML body, letting them send their requests to an endpoint running a container with this simple Go application and you will know soon enough!
 
+In more technical terms, it will basically log and reflect any incoming request. So that information will be available for debug purposes.
+
+## Notice
+
+This is for now still a work in progress, with the following todo's:
+
+- [ ] Make the "log and reflect" a sorted/static message; now the header information bounces around
+- [ ] The ability to store and retrieve requests; the logfile can get long after a while. Based on a Resfull path, because thats a parameter most people are able to edit. Sending tokens and/or header information isn't always allowed in "3rd party" applications
+
 ## Build
 
 ```console
