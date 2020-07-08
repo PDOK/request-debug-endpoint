@@ -3,9 +3,9 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/pdok/request-debug-endpoint.svg)
 ![Go report](https://goreportcard.com/badge/github.com/pdok/request-debug-endpoint)
 
-# request-debug-endpoint
+# request debug endpoint
 
-Simple golang application that will log incoming request request
+This is a simple golang application that will log all incoming requests
 
 ## What will it do
 
