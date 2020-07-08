@@ -11,12 +11,14 @@ import (
 var p *string
 
 func init() {
+	// Get port if none provided use default :80
 	p = flag.String("p", "80", "port number for de request-debug-endpoint")
 	flag.Parse()
 }
 
 func main() {
 
+	// Health (and sanity check endpoint)
 	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 		fmt.Fprintf(w, `{"health": "OK"}`)
@@ -25,6 +27,12 @@ func main() {
 
 	http.HandleFunc("/debug", func(w http.ResponseWriter, r *http.Request) {
 
+		// Log
+		log.Printf("Method: %v\n", r.Method)
+		log.Printf("Host: %s\n", r.Host)
+		log.Printf("Referer: %s\n", r.Referer())
+
+		// Reflect
 		fmt.Fprintf(w, "Method: %v\n", r.Method)
 		fmt.Fprintf(w, "Host: %s\n", r.Host)
 		fmt.Fprintf(w, "Referer: %s\n", r.Referer())
@@ -38,8 +46,9 @@ func main() {
 
 		body, _ := ioutil.ReadAll(r.Body)
 		if len(body) != 0 {
-			fmt.Fprintf(w, "\n =========== Request Body ===========\n %s \n =============== End ================", string(body))
-			log.Printf("\n =========== Request Body ===========\n %s \n =============== End ================", string(body))
+			str := string(body)
+			fmt.Fprintf(w, "\n =========== Request Body ===========\n %s \n =============== End ================", str)
+			log.Printf("\n =========== Request Body ===========\n %s \n =============== End ================", str)
 		}
 
 		return
