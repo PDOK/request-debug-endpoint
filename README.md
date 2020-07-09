@@ -5,7 +5,7 @@
 
 # request debug endpoint
 
-This is a simple golang application that will log all incoming requests
+This is a simple golang application that will log and reflect all incoming requests
 
 ## What will it do
 
