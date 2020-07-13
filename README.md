@@ -1,7 +1,7 @@
 ![GitHub license](https://img.shields.io/github/license/PDOK/request-debug-endpoint)
 ![GitHub release](https://img.shields.io/github/release/PDOK/request-debug-endpoint.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/pdok/request-debug-endpoint.svg)
-![Go report](https://goreportcard.com/badge/github.com/pdok/request-debug-endpoint)
+[![Go Report Card](https://goreportcard.com/badge/PDOK/request-debug-endpoint)](https://goreportcard.com/report/github.com/PDOK/request-debug-endpoint) 
 
 # request debug endpoint
 
