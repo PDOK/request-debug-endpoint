@@ -32,8 +32,6 @@ FROM scratch
 ENV TZ Europe/Amsterdam
 
 WORKDIR /
-ENV PATH=/
-ENV SERVICECONFIG=/
 
 # Import from builder.
 COPY --from=build-env /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
